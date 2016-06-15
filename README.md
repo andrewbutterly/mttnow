@@ -45,6 +45,7 @@ The use of this limited image reformatter has also limited the supported image t
  - Examples:
 
 > java -jar ./build/libs/mttnow-test-ab-0.0.1.jar 'http://www.mttnow.com/' ./output
+
 > java -jar ./build/libs/mttnow-test-ab-0.0.1.jar ./test/index.html /home/andrew/work/output
 
 ## Output
@@ -52,7 +53,7 @@ The use of this limited image reformatter has also limited the supported image t
 This tool preserves the hierarchy of downloaded files when saving and resizing them. It also creates a unique directory per unique image file
  - This is to prevent overwriting with similar filenames and directory structures across different website runs
  - for example, if downloading http://www.example.com/images/horse.jpg to './output' : 
- 	- the tool will save the image to the folder "./output/www.example.com/images/horse.jpg/", with a filename of 'horse.jpg_<timestamp>'
+ 	- the tool will save the image to the folder "./output/www.example.com/images/horse.jpg/", with a filename of 'horse.jpg_TIMESTAMP'
  	- resized images are stored in a subfolder - e.g. "./output/www.example.com/images/horse.jpg/resized/..."
  	- this is to allow an image serving process to more easily map a requested image to a resized version and serve it later on
  	- e.g a mobile client request for 'http://www.example.com/images/horse.jpg' might return the file './output/www.example.com/images/horse.jpg/resized/100.png'
